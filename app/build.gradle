@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 30
@@ -21,6 +22,11 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+    ext {
+        roomVersion = '1.1.1'
+        archLifecycleVersion = '1.1.1'
+        coroutines = '0.26.1'
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -44,12 +50,41 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.1'
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.1'
+    implementation 'androidx.room:room-runtime:2.2.2'
     testImplementation 'junit:junit:4.12'
+    implementation "org.jetbrains.anko:anko-sqlite:0.10.6"
     implementation 'de.hdodenhof:circleimageview:3.0.0'
     implementation 'com.github.bumptech.glide:glide:4.9.0'
     implementation "androidx.core:core-ktx:1.1.0"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0"
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    annotationProcessor 'androidx.room:room-compiler:2.2.2'
 
+    //room database
+    // Room components
+    implementation "android.arch.persistence.room:runtime:1.1.1"
+    implementation "android.arch.persistence.room:runtime:1.1.1"
+    kapt "android.arch.persistence.room:compiler:1.1.1"
+    androidTestImplementation "android.arch.persistence.room:testing:1.1.1"
+
+    // Lifecycle components
+    implementation "android.arch.lifecycle:extensions:1.1.1"
+    kapt "android.arch.lifecycle:compiler:1.1.1"
+
+    // Coroutines
+//    api "org.jetbrains.kotlinx:kotlinx-coroutines-core:0.26.1"
+//    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:0.26.1"
+    api 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.0.1'
+
+    implementation "org.jetbrains.anko:anko:$anko_version"
+    implementation 'com.facebook.stetho:stetho:1.5.0'
+    implementation 'com.facebook.stetho:stetho-okhttp3:1.5.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'com.jakewharton:butterknife:8.8.1'
+}
+kotlin {
+    experimental {
+        coroutines "enable"
+    }
 }

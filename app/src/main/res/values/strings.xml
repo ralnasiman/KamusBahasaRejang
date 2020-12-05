@@ -1,15 +1,14 @@
 <resources>
-    <string name="app_name">Kamus Bahasa Rejang</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="app_name">Kamus Digital Indonesia-Rejang</string>
+    <!--<string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
-
-    <string name="menu_home">Beranda</string>
+    <string name="nav_header_desc">Navigation header</string>-->
+    <string name="search_hint">Cari Kata</string>
+    <string name="menu_home">Indonesia-Rejang</string>
     <string name="menu_tentang_bahasa">Tentang Bahasa Rejang</string>
     <string name="menu_tentang_kami">Tentang Pengembang</string>
-    <string name="aplikasi">Kamus Bahasa Rejang</string>
+    <string name="aplikasi">Kamus Digital Indonesia-Rejang</string>
     <string name="kantorbahasa">Kantor Bahasa Bengkulu</string>
 </resources>

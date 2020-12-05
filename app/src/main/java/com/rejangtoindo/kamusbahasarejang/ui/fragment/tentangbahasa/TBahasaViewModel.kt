@@ -1,4 +1,4 @@
-package com.rejangtoindo.kamusbahasarejang.ui.tentangbahasa
+package com.rejangtoindo.kamusbahasarejang.ui.fragment.tentangbahasa
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

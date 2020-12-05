@@ -21,7 +21,7 @@ class TDeveloperFragment : Fragment() {
     ): View? {
         tDeveloperFragment =
                 ViewModelProviders.of(this).get(TDeveloperViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_home, container, false)
+        val root = inflater.inflate(R.layout.fragment_developer, container, false)
         val textView: TextView = root.findViewById(R.id.text_home)
         tDeveloperFragment.text.observe(viewLifecycleOwner, Observer {
             textView.text = it

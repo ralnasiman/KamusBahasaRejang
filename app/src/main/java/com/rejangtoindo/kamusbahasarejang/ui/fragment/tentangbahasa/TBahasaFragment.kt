@@ -1,4 +1,4 @@
-package com.rejangtoindo.kamusbahasarejang.ui.tentangbahasa
+package com.rejangtoindo.kamusbahasarejang.ui.fragment.tentangbahasa
 
 import android.os.Bundle
 import android.view.LayoutInflater
