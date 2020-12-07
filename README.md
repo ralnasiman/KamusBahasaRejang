@@ -1,2 +1,2 @@
 # KamusBahasaRejang
-Project for Kantor Bahasa Provinsi Bengkulu
+Kamus App use SQLITE and Room Persistance
