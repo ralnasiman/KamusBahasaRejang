@@ -5,10 +5,14 @@
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>-->
-    <string name="search_hint">Cari Kata</string>
+    <string name="search_hint">Cari Kata Indonesia</string>
+    <string name="search_hint2">Cari Kata Rejang</string>
     <string name="menu_home">Indonesia-Rejang</string>
+    <string name="menu_rejang">Rejang-Indonesia</string>
     <string name="menu_tentang_bahasa">Tentang Bahasa Rejang</string>
     <string name="menu_tentang_kami">Tentang Pengembang</string>
     <string name="aplikasi">Kamus Digital Indonesia-Rejang</string>
     <string name="kantorbahasa">Kantor Bahasa Bengkulu</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

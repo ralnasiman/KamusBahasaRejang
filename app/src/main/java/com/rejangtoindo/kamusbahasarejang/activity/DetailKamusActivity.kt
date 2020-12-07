@@ -18,8 +18,8 @@ class DetailKamusActivity : AppCompatActivity() {
         tv_rejang.text= rejang
         val kelas = intent.getStringExtra("EXTRA_KK")
         tv_kelaskata.text= kelas
-        getActionBar()?.setTitle("Detail Kata");
-        getSupportActionBar()?.setTitle("Detail Kata");
+        getActionBar()?.setTitle("Detail Kata Indonesia");
+        getSupportActionBar()?.setTitle("Detail Kata Indonesia");
 //        val lafal = intent.getStringExtra("EXTRA_LAFAL")
 //        tv_pelafalan.text= lafal
     }

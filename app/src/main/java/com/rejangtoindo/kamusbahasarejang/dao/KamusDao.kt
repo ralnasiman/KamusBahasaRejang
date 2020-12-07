@@ -23,6 +23,8 @@ interface KamusDAO {
     @Query("SELECT * FROM kamus WHERE kelas_kata == :name")
     fun carikelaskata(name: String): List<KamusEntity>
 
-    @Query("SELECT * FROM kamus")
+    @Query("SELECT * FROM kamus ORDER BY indo DESC")
     fun getKamus(): List<KamusEntity>
+    @Query("SELECT * FROM kamus order by rejang ASC")
+    fun getKamusRejang(): List<KamusEntity2>
 }

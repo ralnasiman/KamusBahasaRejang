@@ -9,6 +9,10 @@
             android:icon="@drawable/ic_baseline_language_24"
             android:title="@string/menu_home" />
         <item
+            android:id="@+id/nav_rejangindo"
+            android:icon="@drawable/ic_baseline_language_24"
+            android:title="@string/menu_rejang" />
+        <item
             android:id="@+id/nav_tentang_bahasa"
             android:icon="@drawable/ic_baseline_flag_24"
             android:title="@string/menu_tentang_bahasa" />

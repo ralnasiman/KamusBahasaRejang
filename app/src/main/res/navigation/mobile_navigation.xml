@@ -8,8 +8,13 @@
     <fragment
         android:id="@+id/nav_home"
         android:name="com.rejangtoindo.kamusbahasarejang.ui.fragment.home.HomeFragment"
-        android:label="Indonesia-Rejang"
+        android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/nav_rejangindo"
+        android:name="com.rejangtoindo.kamusbahasarejang.ui.fragment.rejang.FragmentRejang"
+        android:label="@string/menu_rejang"
+        tools:layout="@layout/fragment_rejang" />
     <fragment
         android:id="@+id/nav_tentang_bahasa"
         android:name="com.rejangtoindo.kamusbahasarejang.ui.fragment.tentangbahasa.TBahasaFragment"
