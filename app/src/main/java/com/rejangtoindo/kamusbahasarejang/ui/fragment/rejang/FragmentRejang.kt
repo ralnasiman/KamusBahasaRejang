@@ -1,7 +1,7 @@
 package com.rejangtoindo.kamusbahasarejang.ui.fragment.rejang
 
+import android.app.AlertDialog
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -11,11 +11,14 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.facebook.stetho.Stetho
 import com.facebook.stetho.okhttp3.StethoInterceptor
 import com.rejangtoindo.kamusbahasarejang.R
-import com.rejangtoindo.kamusbahasarejang.activity.DetailRejangActivity
-import com.rejangtoindo.kamusbahasarejang.adapter.item_list_adapter
 import com.rejangtoindo.kamusbahasarejang.adapter.item_list_adapter2
 import com.rejangtoindo.kamusbahasarejang.dao.database
 import com.rejangtoindo.kamusbahasarejang.model.kamus
+import kotlinx.android.synthetic.main.fragment_detail_indo.view.btn_oke
+import kotlinx.android.synthetic.main.fragment_detail_indo.view.tvIndonesia
+import kotlinx.android.synthetic.main.fragment_detail_indo.view.tvJudul
+import kotlinx.android.synthetic.main.fragment_detail_indo.view.tvKelas
+import kotlinx.android.synthetic.main.fragment_detail_rejang.view.*
 import kotlinx.android.synthetic.main.fragment_rejang.*
 import okhttp3.OkHttpClient
 import org.jetbrains.anko.db.classParser
@@ -82,7 +85,7 @@ class FragmentRejang : Fragment(), item_list_adapter2.CellClickListener {
         if (isFirstTime!!) {
             activity?.getPreferences(Context.MODE_PRIVATE)?.edit()?.putBoolean("isFirstRun", false)
                 ?.apply()
-            migrateDatabase()
+            migrasiDatabase()
         }
         rv_list_rejang.setHasFixedSize(true)
         rv_list_rejang.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
@@ -134,9 +137,9 @@ class FragmentRejang : Fragment(), item_list_adapter2.CellClickListener {
         adp.notifyDataSetChanged()
     }
 
-    private fun migrateDatabase(){
+    private fun migrasiDatabase(){
 
-        getActivity()?.getApplicationContext()?.assets?.open("kosakata_update.csv")?.bufferedReader().use {
+        getActivity()?.getApplicationContext()?.assets?.open("kosakata_update2.csv")?.bufferedReader().use {
             val iterator = it?.lineSequence()?.iterator()
             if (iterator != null) {
                 while(iterator.hasNext()) {
@@ -159,12 +162,26 @@ class FragmentRejang : Fragment(), item_list_adapter2.CellClickListener {
     }
 
     override fun onCellClickListener(data: kamus) {
-        val intent= Intent(context, DetailRejangActivity::class.java)
-        intent.putExtra("EXTRA_REJANG", data.rejang)
-        intent.putExtra("EXTRA_INDO", data.indo)
-        intent.putExtra("EXTRA_KK", data.kelas_kata)
-        startActivity(intent)
-//        Toast.makeText(context,data.indo, Toast.LENGTH_SHORT).show()
+        val pesan = LayoutInflater.from(activity).inflate(R.layout.fragment_detail_rejang, null)
+
+        //AlertDialogBuilder
+        val messageBoxBuilder = AlertDialog.Builder(activity).setView(pesan)
+
+        //setting text values
+        pesan.tvJudul.text = "Detail Kata Rejang"
+        pesan.tvbhsRejang.text = "Rejang = "+data.rejang
+        pesan.tvIndo.text = "Indonesia = "+data.indo
+//        messageBoxView.tvLafal.text = data.lafal
+        pesan.tvKelasKata.text = "Kelas kata = "+data.kelas_kata
+
+        //show dialog
+        val  messageBoxInstance = messageBoxBuilder.show()
+
+        //set Listener
+        pesan.btn_oke.setOnClickListener(){
+            //close dialog
+            messageBoxInstance.dismiss()
+        }
     }
 
 }

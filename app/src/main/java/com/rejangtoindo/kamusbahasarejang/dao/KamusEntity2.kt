@@ -5,7 +5,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 
-@Entity(tableName = "kamus")
+@Entity(tableName = "kamus2")
 data class KamusEntity2(
     @PrimaryKey(autoGenerate = true) val id: Int,
     val rejang: String,

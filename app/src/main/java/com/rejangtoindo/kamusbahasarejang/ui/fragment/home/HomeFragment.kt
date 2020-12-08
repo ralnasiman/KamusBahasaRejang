@@ -1,7 +1,7 @@
 package com.rejangtoindo.kamusbahasarejang.ui.fragment.home
 
+import android.app.AlertDialog
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,16 +11,17 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.facebook.stetho.Stetho
 import com.facebook.stetho.okhttp3.StethoInterceptor
 import com.rejangtoindo.kamusbahasarejang.R
-import com.rejangtoindo.kamusbahasarejang.activity.DetailKamusActivity
 import com.rejangtoindo.kamusbahasarejang.adapter.item_list_adapter
 import com.rejangtoindo.kamusbahasarejang.dao.database
 import com.rejangtoindo.kamusbahasarejang.model.kamus
+import kotlinx.android.synthetic.main.fragment_detail_indo.view.*
 import kotlinx.android.synthetic.main.fragment_home.*
 import okhttp3.OkHttpClient
 import org.jetbrains.anko.db.classParser
 import org.jetbrains.anko.db.insert
 import org.jetbrains.anko.db.select
 import org.jetbrains.anko.sdk27.coroutines.textChangedListener
+
 
 class HomeFragment : Fragment(), item_list_adapter.CellClickListener {
     private var mode: Int = 1
@@ -76,6 +77,7 @@ class HomeFragment : Fragment(), item_list_adapter.CellClickListener {
         if (isFirstTime!!) {
             activity?.getPreferences(Context.MODE_PRIVATE)?.edit()?.putBoolean("isFirstRun", false)
                 ?.apply()
+
             migrateDatabase()
         }
         rv_list.setHasFixedSize(true)
@@ -83,7 +85,8 @@ class HomeFragment : Fragment(), item_list_adapter.CellClickListener {
         adp = item_list_adapter(
             mode,
             res,
-        this)
+            this
+        )
         rv_list.adapter = adp
 
         getKamus()
@@ -97,29 +100,29 @@ class HomeFragment : Fragment(), item_list_adapter.CellClickListener {
 
     }
 
-private fun updateAdp(){
-    val temp: Collection<kamus>
+    private fun updateAdp() {
+        val temp: Collection<kamus>
 
-    if (mode == 1)
-        temp = res.filter {
-            it.indo.decapitalize().contains(etsearch.text.toString().decapitalize())
+        if (mode == 1)
+            temp = res.filter {
+                it.indo.decapitalize().contains(etsearch.text.toString().decapitalize())
 
-        }
-    else
-        temp = res.filter {
-            it.rejang.decapitalize().contains(etsearch.text.toString().decapitalize())
-        }
+            }
+        else
+            temp = res.filter {
+                it.rejang.decapitalize().contains(etsearch.text.toString().decapitalize())
+            }
 //    else
 //        temp = res.filter {
 //            it.kelas_kata.decapitalize().contains(etsearch.text.toString().decapitalize())
 //        }
 
-    adp = item_list_adapter(mode, temp, this)
+        adp = item_list_adapter(mode, temp, this)
 
-    rv_list.adapter = adp
-}
+        rv_list.adapter = adp
+    }
 
-    private fun getKamus(){
+    private fun getKamus() {
 
         val res2 = requireActivity().database?.use {
             select(kamus.TABLE).parseList(classParser<kamus>())
@@ -129,12 +132,13 @@ private fun updateAdp(){
         adp.notifyDataSetChanged()
     }
 
-    private fun migrateDatabase(){
+    private fun migrateDatabase() {
 
-        getActivity()?.getApplicationContext()?.assets?.open("kosakata_update.csv")?.bufferedReader().use {
+        getActivity()?.getApplicationContext()?.assets?.open("kosakata_update.csv")
+            ?.bufferedReader().use {
             val iterator = it?.lineSequence()?.iterator()
             if (iterator != null) {
-                while(iterator.hasNext()) {
+                while (iterator.hasNext()) {
                     val line = iterator.next()
                     val data = line.split(",")
                     activity?.database?.use {
@@ -154,12 +158,26 @@ private fun updateAdp(){
     }
 
     override fun onCellClickListener(data: kamus) {
-        val intent= Intent(context, DetailKamusActivity::class.java)
-        intent.putExtra("EXTRA_INDO", data.indo)
-        intent.putExtra("EXTRA_REJANG", data.rejang)
-        intent.putExtra("EXTRA_KK", data.kelas_kata)
-        startActivity(intent)
-//        Toast.makeText(context,data.indo, Toast.LENGTH_SHORT).show()
-    }
 
+        val pesan = LayoutInflater.from(activity).inflate(R.layout.fragment_detail_indo, null)
+
+        //AlertDialogBuilder
+        val messageBoxBuilder = AlertDialog.Builder(activity).setView(pesan)
+
+        //setting text values
+        pesan.tvJudul.text = "Detail Kata Indonesia"
+        pesan.tvIndonesia.text = "Indonesia = "+data.indo
+        pesan.tvbhsRejang.text = "Rejang = "+data.rejang
+//        messageBoxView.tvLafal.text = data.lafal
+        pesan.tvKelas.text = "Kelas kata = "+data.kelas_kata
+
+        //show dialog
+        val  messageBoxInstance = messageBoxBuilder.show()
+
+        //set Listener
+        pesan.btn_oke.setOnClickListener(){
+            //close dialog
+            messageBoxInstance.dismiss()
+        }
+    }
 }
