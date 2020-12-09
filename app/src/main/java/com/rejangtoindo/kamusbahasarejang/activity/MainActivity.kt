@@ -11,6 +11,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.airbnb.lottie.LottieAnimationView
 import com.google.android.material.navigation.NavigationView
 import com.rejangtoindo.kamusbahasarejang.R
 import com.rejangtoindo.kamusbahasarejang.ui.fragment.home.HomeFragment
@@ -18,7 +19,7 @@ import com.rejangtoindo.kamusbahasarejang.ui.fragment.home.HomeFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
-    internal lateinit var profileimage: ImageView
+    internal lateinit var profileimage: LottieAnimationView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -33,8 +34,7 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
-        profileimage = navView.getHeaderView(0).findViewById(R.id.imageView)
-        profileimage.setImageResource(R.drawable.logo)
+        profileimage = navView.getHeaderView(0).findViewById(R.id.lav_thumbUp)
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.nav_home,

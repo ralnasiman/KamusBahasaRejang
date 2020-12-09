@@ -164,6 +164,7 @@ class HomeFragment : Fragment(), item_list_adapter.CellClickListener {
         //AlertDialogBuilder
         val messageBoxBuilder = AlertDialog.Builder(activity).setView(pesan)
 
+
         //setting text values
         pesan.tvJudul.text = "Detail Kata Indonesia"
         pesan.tvIndonesia.text = "Indonesia = "+data.indo
@@ -173,7 +174,7 @@ class HomeFragment : Fragment(), item_list_adapter.CellClickListener {
 
         //show dialog
         val  messageBoxInstance = messageBoxBuilder.show()
-
+//       messageBoxInstance.window?.setBackgroundDrawableResource(R.drawable.shape_background)
         //set Listener
         pesan.btn_oke.setOnClickListener(){
             //close dialog
