@@ -26,7 +26,7 @@ class HelperKamus(ctx: Context) : ManagedSQLiteOpenHelper(ctx, "kamus.db") {
             kamus.TABLE, true,
             kamus.indo to TEXT,
             kamus.rejang to TEXT,
-                    kamus.kelas_kata to TEXT
+            kamus.kelas_kata to TEXT
         )
     }
 

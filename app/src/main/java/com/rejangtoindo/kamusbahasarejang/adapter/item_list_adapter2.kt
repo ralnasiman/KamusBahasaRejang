@@ -33,8 +33,8 @@ class item_list_adapter2(
 
     }
     inner class ViewHolder(view:View): RecyclerView.ViewHolder(view) {
-        private val indonesia: TextView = view.findViewById(R.id.tvIndo)
         private val rejang: TextView = view.findViewById(R.id.txtRejang)
+        private val indonesia: TextView = view.findViewById(R.id.tvIndo)
 //        private val kelaskata: TextView = view.findViewById(R.id.tv_kelaskata)
 
 

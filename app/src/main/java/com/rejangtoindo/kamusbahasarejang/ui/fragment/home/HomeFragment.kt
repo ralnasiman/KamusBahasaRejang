@@ -12,10 +12,12 @@ import com.facebook.stetho.Stetho
 import com.facebook.stetho.okhttp3.StethoInterceptor
 import com.rejangtoindo.kamusbahasarejang.R
 import com.rejangtoindo.kamusbahasarejang.adapter.item_list_adapter
+import com.rejangtoindo.kamusbahasarejang.adapter.item_list_adapter2
 import com.rejangtoindo.kamusbahasarejang.dao.database
 import com.rejangtoindo.kamusbahasarejang.model.kamus
 import kotlinx.android.synthetic.main.fragment_detail_indo.view.*
 import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.fragment_rejang.*
 import okhttp3.OkHttpClient
 import org.jetbrains.anko.db.classParser
 import org.jetbrains.anko.db.insert
@@ -102,24 +104,31 @@ class HomeFragment : Fragment(), item_list_adapter.CellClickListener {
 
     private fun updateAdp() {
         val temp: Collection<kamus>
-
-        if (mode == 1)
+        if (mode == 1) {
             temp = res.filter {
                 it.indo.decapitalize().contains(etsearch.text.toString().decapitalize())
-
             }
-        else
+            adp = item_list_adapter(mode, temp, this)
+
+            rv_list.adapter = adp
+        }
+        else if(mode==2) {
             temp = res.filter {
                 it.rejang.decapitalize().contains(etsearch.text.toString().decapitalize())
+
             }
-//    else
-//        temp = res.filter {
-//            it.kelas_kata.decapitalize().contains(etsearch.text.toString().decapitalize())
-//        }
+            adp = item_list_adapter(mode, temp, this)
+            rv_list.adapter = adp
+        }
 
-        adp = item_list_adapter(mode, temp, this)
-
-        rv_list.adapter = adp
+////    else
+////        temp = res.filter {
+////            it.kelas_kata.decapitalize().contains(etsearch.text.toString().decapitalize())
+////        }
+//
+//        adp = item_list_adapter(mode, temp, this)
+//
+//        rv_list.adapter = adp
     }
 
     private fun getKamus() {
@@ -134,7 +143,7 @@ class HomeFragment : Fragment(), item_list_adapter.CellClickListener {
 
     private fun migrateDatabase() {
 
-        getActivity()?.getApplicationContext()?.assets?.open("kosakata_update.csv")
+        getActivity()?.getApplicationContext()?.assets?.open("kosakata.csv")
             ?.bufferedReader().use {
             val iterator = it?.lineSequence()?.iterator()
             if (iterator != null) {
@@ -147,8 +156,6 @@ class HomeFragment : Fragment(), item_list_adapter.CellClickListener {
                             kamus.indo to data[1],
                             kamus.rejang to data[2],
                             kamus.kelas_kata to data[3]
-
-
                         )
                     }
                 }
@@ -163,7 +170,6 @@ class HomeFragment : Fragment(), item_list_adapter.CellClickListener {
 
         //AlertDialogBuilder
         val messageBoxBuilder = AlertDialog.Builder(activity).setView(pesan)
-
 
         //setting text values
         pesan.tvJudul.text = "Detail Kata Indonesia"

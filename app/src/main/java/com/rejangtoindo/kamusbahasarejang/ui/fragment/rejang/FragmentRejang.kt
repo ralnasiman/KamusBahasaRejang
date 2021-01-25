@@ -26,11 +26,6 @@ import org.jetbrains.anko.db.insert
 import org.jetbrains.anko.db.select
 import org.jetbrains.anko.sdk27.coroutines.textChangedListener
 
-/**
- * A simple [Fragment] subclass.
- * Use the [FragmentRejang.newInstance] factory method to
- * create an instance of this fragment.
- */
 class FragmentRejang : Fragment(), item_list_adapter2.CellClickListener {
     private var mode: Int = 1
     private lateinit var adp: item_list_adapter2
@@ -107,30 +102,30 @@ class FragmentRejang : Fragment(), item_list_adapter2.CellClickListener {
     private fun updateAdp(){
         val temp: Collection<kamus>
 
-        if (mode == 1)
+        if (mode == 1) {
             temp = res.filter {
                 it.rejang.decapitalize().contains(etCari.text.toString().decapitalize())
 
             }
-        else
+            adp = item_list_adapter2(mode, temp, this)
+            rv_list_rejang.adapter = adp
+        }
+        else if(mode==2) {
             temp = res.filter {
                 it.indo.decapitalize().contains(etCari.text.toString().decapitalize())
-
             }
-//    else
-//        temp = res.filter {
-//            it.kelas_kata.decapitalize().contains(etsearch.text.toString().decapitalize())
-//        }
+            adp = item_list_adapter2(mode, temp, this)
 
-        adp = item_list_adapter2(mode, temp, this)
+            rv_list_rejang.adapter = adp
+        }
 
-        rv_list_rejang.adapter = adp
+
     }
 
     private fun getKamusRejang(){
 
         val res2 = requireActivity().database?.use {
-            select(kamus.TABLE).parseList(classParser<kamus>())
+            select(kamus.TABLE ).orderBy(kamus.rejang).parseList(classParser<kamus>())
         }
         res.clear()
         res.addAll(res2)
@@ -139,7 +134,7 @@ class FragmentRejang : Fragment(), item_list_adapter2.CellClickListener {
 
     private fun migrasiDatabase(){
 
-        getActivity()?.getApplicationContext()?.assets?.open("kosakata_update2.csv")?.bufferedReader().use {
+        getActivity()?.getApplicationContext()?.assets?.open("kosakata.csv")?.bufferedReader().use {
             val iterator = it?.lineSequence()?.iterator()
             if (iterator != null) {
                 while(iterator.hasNext()) {

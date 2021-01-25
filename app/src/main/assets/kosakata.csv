@@ -1,0 +1,451 @@
+﻿1,abu,abau,n
+2,ada,ade,v
+3,adik,asuak,n
+4,akhirnya,penyudo,adv
+5,air,bioa,n
+6,alangkah,padeak,adv
+7,anak,anok,n
+8,anak buah,anak bueak,n
+9,anjing,kuyuk,n
+10,apa,jano/gen,pron
+11,api,opoi,n
+12,atas,das,n
+13,ayah,bak/bapok/tiak,n
+14,ayah,bak,n
+15,ayah,tiak,n
+16,ayam,monok,n
+17,babu cuci,tukang tepap,n
+18,badan,awok,n
+19,bagaimana,awei ipe,pron
+20,bagus,ba es,a
+21,baik,padek,a
+22,baju,bajau,n
+23,balas,bales,n
+24,bambu,buluak,n
+25,banyak,dau,a
+26,bapak,bak,n
+27,baring ,gulek,v
+28,baris,le et,n
+29,baru,belau,a
+30,basah,ceak,a
+31,batal,buye,a
+32,batu,butau,n
+33,bawah,beak,n
+34,beku,bekau,a
+35,belakang,belakang,n
+36,beli,tukua,v
+37,belok,kilok,v
+38,belum,ati,adv
+39,benang,benang,n
+40,benci/iri,jengik,a
+41,bengkak,bekok,a
+42,beranak,banok,v
+43,beras,belas,n
+44,berat,beneg,a
+45,berbagai,area,num
+46,berbicara,miling,v
+47,berdiri tegak,je,v
+48,berdua,beduai,num
+49,beri,lei,v
+50,beri ,agiak,v
+51,berjalan,paneu,v
+52,berpikir,peker,v
+53,bersama,serpok,adv
+54,bersaudara,pasuak,v
+55,bertambah,tambeak,v
+56,bertanding,tanding,v
+57,bertanya,betanye,v
+58,bertemu,temau,v
+59,besar,lai,a
+60,betul,benea,a
+61,biasa,biaso,a
+62,binatang,benatang,n
+63,bintang,bitang,n
+64,bisa,nam,v
+65,boleh,buliak,adv
+66,buah,buak,n
+67,buat,menea,v
+68,bukalah,mukok,v
+69,bukan,iso,adv
+70,bulu,bulau,n
+71,bunga,bungai,n
+72,bungsu,piset,n
+73,bunuh ,nunuak,v
+74,buruk,kidek,a
+75,busuk,usuk,a
+76,cacing,gelong,n
+77,cantik,baes,a
+78,cara,ca o,n
+79,celaka,celako,a
+80,celana,serwa,n
+81,cepat,gacang,a
+82,cium ,mbau,v
+83,dalam,lem,a
+84,dan,ngen,p
+85,danau,daneu,n
+86,darah,daleak,n
+87,dari,kunei,p
+88,datang,teko,v
+89,daun,dawen,n
+90,dekat,pa'ok,a
+91,dekat,iding,a
+92,demikian,awei o,pron
+93,dengan,ngen,p
+94,dengar,tmiuk,v
+95,desa,sadei,n
+96,dewasa,bi lei,a
+97,di,neak,p
+98,di mana,neak ipe,pron
+99,dia,si,pron
+100,dingin,sengok,a
+101,diri (berdiri),tegok,v
+102,dua,duai,num
+103,duduk,temot,v
+104,ekor,ikoa,n
+105,empat,pat,num
+106,enak,baik,a
+107,gadis,semulen,n
+108,gagah perkasa,gerot,a
+109,ganti,gitei,n
+110,garam,silai,n
+111,gembira,riang,a
+112,gigi,epen,n
+113,gigit ,tengit,v
+114,gosok ,gosok,v
+115,gulai,lapen,n
+116,gunung,tebo,n
+117,habis,abis,v
+118,hanya,cuma,adv
+119,hanyut,monot,v
+120,hapus ,apus,v
+121,hari,bilai,n
+122,harimau,imou,n
+123,harta,hok,n
+124,hati,atei,n
+125,mau,lok,adv
+126,hidung,yung,n
+127,hidup,idup,v
+128,hijau,ijo,n
+129,hitam,meleu,n
+130,hitung,reken,v
+131,hujan,ujen,n
+132,hutan,imbo,n
+133,ibu,indok,n
+134,ikan,kan,n
+135,ikat ,eket,n
+136,ilmu,ilmau,n
+137,indah,baes,a
+138,ini,diyo,pron
+139,isap ,sep,v
+140,isi,isai,n
+141,istri,ngenyan,n
+142,itulah,do'o ba,pron
+143,jadi,jijai,v
+144,jahit ,jait,v
+145,jalan ,dalen,n
+146,jambu,jambau,n
+147,jangan,jibeak,adv
+148,janji,janjai,n
+149,jantung,jatung,n
+150,jauh,uak,a
+151,jeruk,lemeu,n
+152,jika,amen,p
+153,kakak,kakok,n
+154,kakek/nenek,ninik,n
+155,kaki,kekea,n
+156,kalau,amen,p
+157,kalian,udi,pron
+158,kami,keme,pron
+159,kamu,ko/kumu,pron
+160,kapan,tengen,pron
+161,karena,kerno,p
+162,kata ,kadeak,n
+163,ke,moi,p
+164,atas,das,n
+165,sini,mio,pron
+166,kebiasaan,adat,n
+167,kecil,titik,a
+168,keinginan/cita-cita,kelok,n
+169,kejadian,kejijei,n
+170,kelihatan,keten,v
+171,kepala,ulau,n
+172,kering,ke'ing,a
+173,kesalahan,saleak,n
+174,kiri,kidau,n
+175,kita,ite,pron
+176,kotor,ngei,a
+177,kucing,kucing,n
+178,kuku,selon,n
+179,kulit,babok,n
+180,kuning,kuning,n
+181,kurung ,ke ung,n
+182,kutu,gutau,n
+183,ladang,umai,n
+184,lagi,igei,adv
+185,lahir,laher,v
+186,lain,leyen,a
+187,laki-laki,semanei,n
+188,lama,an,a
+189,langit,lenget,n
+190,lari,melilai,v
+191,lebar,libea,a
+192,lebih,lebiak,a
+193,leher,kagen,n
+194,lemak,gemuk,n
+195,lempar,meluk,v
+196,lewat,melitas,v
+197,licin,licin,a
+198,lidah,dileak,n
+199,lihat ,kemliak,v
+200,lima,lemo,num
+201,luar biasa,mejako,a
+202,ludah,inoa,n
+203,lurus,lu'us,a
+204,lutut,ketot,n
+205,makan,mbuk,v
+206,maksud,maksut,n
+207,malam,kelmen,n
+208,malu,selek,a
+209,mana,ipe,pron
+210,manja,cu'ik,a
+211,manusia,tun,n
+212,marah,mengiak,a
+213,mari,maro,p
+214,masak,mesok,a
+215,mata,matai,n
+216,matahari,matai bilai,n
+217,melahirkan,belpas,v
+218,melempar,meluk,v
+219,memakai,makei,v
+220,memanggil,medeu,v
+221,memanjat,kenek,v
+222,membawa,mbin,v
+223,membuang,muang,v
+224,membunuh,munuak,v
+225,membungkus,mukus,v
+226,memegang,megong,v
+227,memekakkan,mekok,v
+228,memelihara,midup,v
+229,memeluk,megep,v
+230,memerangi,merang,v
+231,memotong,temtok,v
+232,memperlihatkan,kemten,v
+233,mempunyai,temuan,v
+234,menangis,mengindoi,v
+235,menangkap,temakep,v
+236,menaruh,mepek,v
+237,mencari,mesoa,v
+238,mencoba,cemubo,v
+239,mendapat,dapet,v
+240,mendatangi,magea,v
+241,mendengarkan,temiuk,v
+242,mengajak,ngajok,v
+243,mengajar,majea,v
+244,mengakui,ngakau,v
+245,mengambil,mok,v
+246,mengamuk,mengamuk,v
+247,mengapa,bene,pron
+248,mengerjakan,kemerjo,v
+249,mengganti,gemitei,v
+250,menggantung,gematung,v
+251,menghadap,madep,v
+252,mengintip,mimbang,v
+253,mengiris,semisit,v
+254,menguburkan,kemubua,v
+255,menikah,nikeak,v
+256,meninggal dunia,meningea,v
+257,menjaga,jemago,v
+258,menjawab,jemawap,v
+259,menjual,jemuoa,v
+260,menolong,temulung,v
+261,mentertawakan,temawei,v
+262,menunjuk,temunjuk,v
+263,menurunkan,temu'un,v
+264,menyanyi,berjung,v
+265,menyapu,semupau,v
+266,menyingsing,semsing,v
+267,merah,mileak,n
+268,merebut,mebut,v
+269,mereka,tobo'o (jauh dari pembicara)/tobo yo (dekat dengan pembicara),pron
+270,minum ,menem,v
+271,mirip,dekmai,a
+272,misal,misal,n
+273,misalnya,misal ne,p
+274,mohon,kinoi,v
+275,mujur,mujua,a
+276,mulut,bibia,n
+277,muntah,muteak,v
+278,musibah,balak,n
+279,napas ,napas,n
+280,nama,gen,n
+281,nanti,be,n
+282,nasi,mei,n
+283,nomor,nomor,n
+284,orang,tun,n
+285,padi,poi,n
+286,pakai,makei,v
+287,pakaian,keracok,n
+288,paling,paling,adv
+289,palu,petus,n
+290,panah,pana,n
+291,panas,panes,a
+292,pancuran,pacoa,n
+293,pandai,pacok,a
+294,panjang,panjang,n
+295,parang,pitat,n
+296,pasir,benei,n
+297,pecah,pecuak,v
+298,pedas,pelgiak,a
+299,pegang ,pegong,v
+300,pekerjaan,uleak,n
+301,pemandangan,pengeliak,n
+302,pembantu,babu,n
+303,pembersihan,penyiep,n
+304,pendek,pendok,a
+305,penuh,penuak,a
+306,perang,perang,n
+307,peras ,pe'es,v
+308,perempuan,selawei,n
+309,perempuan,bei,n
+310,pergi,alau,v
+311,persimpangan,sipang,n
+312,perut,tnei,n
+313,pesan,pesen,n
+314,peti,petei,n
+315,pihak,kak,n
+316,pikir ,peker,n
+317,piring,pinggan,n
+318,pisang,pisang,n
+319,pisau,piseu,n
+320,plafon,lémén,n
+321,pohon,pun,n
+322,pokok,pokok,n
+323,pondok,pondok,n
+324,potong,tetok,v
+325,pukul ,tepok, lipai,v
+326,pulang,belek,v
+327,puluh,puloak,n
+328,punggung,kedong,n
+329,pusing,renyeng,a
+330,putih,putiak,n
+331,putus,putus,v
+332,raja,rajo,n
+333,raksa,rakso,n
+334,rakyat,rakyat,n
+335,ramai,rami,a
+336,rambut,buk,n
+337,ranting,takie,n
+338,rasa,asai,n
+339,Rejang,jang,n
+340,rendah,tembeak,a
+341,rotan,ebes,n
+342,rumah,umeak,n
+343,rumput,dukut,n
+344,rupanya,ules o,adv
+345,rusa,uso,n
+346,sadar,sadar,v
+347,saja,bae,adv
+348,sakit,sakit,a
+349,sama,samo,a
+350,sampah,pegas,n
+351,sampai,sapei,v
+352,sangka,sako,v
+353,sapi,sapai,n
+354,satu,do,num
+355,saya,uku,pron
+356,sayang,sayang,a
+357,sayap,sayep,n
+358,sebab,sebap,n
+359,sebelum,ayok,adv
+360,besar,lai,a
+361,secara,seca'o,p
+362,sedang,gi dong,adv
+363,sedih,ibo,a
+364,sedikit,didik,a
+365,seharusnya,arus,adv
+366,sehingga,lajau,p
+367,sekarang,uyo,n
+368,sekeliling,keliling,p
+369,sempit,sepit,a
+370,semua,kute,num
+371,sendirian,suang,adv
+372,sepanjang hari,bilei-bilei,n
+373,seperti,awei,p
+374,sergap,semergap,v
+375,sering,awit,adv
+376,sesaat,decang,n
+377,setiap,tep,num
+378,siamang,siamang,n
+379,siapa,api,pron
+380,sifat,sifet,n
+381,silat,besilek,n
+382,siluman/setan,semat,n
+383,sini,piyo,pron
+384,sana,doloi,pron
+385,suami,smaten,n
+386,suara,saei,n
+387,sudah,bi,adv
+388,sudah,sudo,adv
+389,suka,galok,v
+390,sungai,bioa unen,n
+391,supaya,mako,p
+392,suruh,luak,n
+393,suruh,meluak,n
+394,suruhlah,keluak,v
+395,syarat,sarat,n
+396,tadi,nano,n
+397,tahu,namen,v
+398,tahun,taun,n
+399,tajam,tajem, lucuk,a
+400,takut,saben,a
+401,talang,talang,n
+402,tali,tilai,n
+403,tali,tilei,n
+404,tanda,tando,n
+405,tanduk,tanduk,n
+406,tangan,tangen,n
+407,tangguk,sauk,n
+408,taruh,pek,n
+409,tawa,tawai,n
+410,tebal,keboa,a
+411,telinga,ti'uk,n
+412,telur,tenoa,n
+413,teman,kwat,n
+414,tempat,penan,n
+415,temu,temau,v
+416,terbang,tebang,v
+417,tercengang,cengang,v
+418,terhenti,tebedan,v
+419,terhormat,baik-baik,a
+420,terikat,tepeket,v
+421,teringat,tinget,v
+422,terkejut,tekejir,v
+423,terlalu,kembiak,v
+424,terlihat,tekeliak,v
+425,termakan,tekembuk,v
+426,tersangkut,sakut,v
+427,tersesat,limeu,v
+428,tertua,de tuai su'ang,a
+429,terus,terus,adv
+430,terus menerus,pogoa,adv
+431,tidak,coa,adv
+432,tidur,tidua,v
+433,tiga,telau,num
+434,tinggal,tingea,v
+435,tipis,mipis,a
+436,tiup ,tniup,v
+437,tolong,tulung,v
+438,tuhan,tuhan,n
+439,tulang,tlan,n
+440,turun,tu'un,v
+441,turut,totoa,v
+442,tusuk,cucuk/cêcuk,v
+443,uang,caci,n
+444,ujang,ujang,n
+445,ujian,ujen,n
+446,ujung,ujung,n
+447,ular,dung,n
+448,upik,upik,n
+449,usus,usus,n
+450,wajah,papea,n
+451,Ya,au,p
